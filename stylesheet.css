@@ -1,0 +1,79 @@
+body {
+    background-color: rgb(185, 24, 24);
+}
+
+#gameBoard {
+    background-color: whitesmoke;
+    /*margin-top: 10%;
+    margin-left: 25%;
+    margin-right: 25%;
+    */
+    width: 50%;
+    margin-left: 25%;
+} 
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 0;
+}
+
+.box {
+    padding-left: 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-color: black;
+    border-width: 0.5px;
+    border-style: solid;
+    flex: 1;
+    min-height: 130px;
+}
+.box:hover {
+    background-color: rgb(192, 190, 190);
+}
+.tag {
+    font-size: 100px;
+}
+.tagX {
+    color: black;
+}
+.tagO {
+    color: rgb(185, 24, 24);
+}
+
+#scoreboard {
+    margin-top: 6%;
+    margin-left: 25%;
+}
+
+.scoretext {
+    font-size: 65px;
+    color: whitesmoke;
+    text-align: center;
+    font-weight: bold;
+    margin-left: 17%;
+}
+
+#player1 {
+    float: left;
+    font-size: x-large;
+    color: whitesmoke;
+    text-align: center;
+}
+
+#player2 {
+    float: right;
+    font-size: 70px;
+    color: whitesmoke;
+    text-align: center;
+}
+
+#gameendtext {
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%,-45%);
+    z-index: 999;
+    color: white;
+    font-size: 80px;
+}
