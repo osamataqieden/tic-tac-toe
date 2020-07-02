@@ -166,6 +166,8 @@ const AIPlayer = (() => {
                 } 
             }
         }
+        if(index === undefined)
+            index = 3;
         console.log("Index: " + index);
         return index;
     }
@@ -268,10 +270,11 @@ const displayController = (() => {
 
 function boxPressed(id) {
     let val = displayController.boxPressed(id);
+    console.log(val);
     if(!gameboard.isWin('X') && !gameboard.isWin('O') && !(displayController.getMovesPlayed() === 9) && val){
         if(displayController.getMovesPlayed() === 1){
-            if(gameboard.getBoard()[4] === null)
-                displayController.boxPressed(4);
+            if(gameboard.getBoard()[2] === null)
+                displayController.boxPressed(2);
             else displayController.boxPressed(0);
         }
         else displayController.boxPressed(AIPlayer.nextMove());
