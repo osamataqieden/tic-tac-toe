@@ -1,16 +1,11 @@
 body {
-    background-color: rgb(185, 24, 24);
+    font-family: cursive;
 }
 
-#gameBoard {
-    background-color: whitesmoke;
-    /*margin-top: 10%;
-    margin-left: 25%;
-    margin-right: 25%;
-    */
-    width: 50%;
-    margin-left: 25%;
-} 
+#container {
+    max-width: 600px;
+    margin: 0 auto;
+}
 
 .row {
     display: flex;
@@ -19,18 +14,26 @@ body {
 }
 
 .box {
-    padding-left: 10%;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    border-color: black;
-    border-width: 0.5px;
-    border-style: solid;
+    border-bottom: 0.5px solid black;
+    border-right: 0.5px solid black;
     flex: 1;
-    min-height: 130px;
+    min-height: 139px;
+    text-align: center;
 }
+
+.row:nth-child(4) .box {
+    border-bottom: 0;
+}
+
+.box:nth-child(3) {
+    border-right: 0;
+}
+
 .box:hover {
+    transition: 0.5s background-color;
     background-color: rgb(192, 190, 190);
 }
+
 .tag {
     font-size: 100px;
 }
@@ -43,15 +46,14 @@ body {
 
 #scoreboard {
     margin-top: 6%;
-    margin-left: 25%;
+    text-align: center;
 }
 
 .scoretext {
     font-size: 65px;
-    color: whitesmoke;
     text-align: center;
     font-weight: bold;
-    margin-left: 17%;
+    color: black;
 }
 
 #player1 {
@@ -71,9 +73,15 @@ body {
 #gameendtext {
     position: absolute;
     left: 50%;
-    top: 55%;
+    top: 45%;
     transform: translate(-50%,-45%);
     z-index: 999;
     color: white;
     font-size: 80px;
+}
+
+@media (max-width: 600px){
+    #gameendtext {
+        font-size: 30px;
+    }
 }
